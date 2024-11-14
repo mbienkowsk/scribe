@@ -19,7 +19,7 @@ error_chain! {
     }
 
     foreign_links {
-        Io(::std::io::Error) #[cfg(unix)];
+        Io(::std::io::Error);// #[cfg(unix)];
         ParsingError(syntect::parsing::ParsingError);
         ScopeError(syntect::parsing::ScopeError);
         SyntaxLoadingError(syntect::LoadingError);
